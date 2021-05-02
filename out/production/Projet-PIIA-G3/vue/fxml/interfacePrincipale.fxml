@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="700.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <SplitPane dividerPositions="0.22605790645879734" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="280.0" minWidth="260.0" prefWidth="260.0" style="-fx-background-color: black;">
+               <content>
+                  <VBox prefWidth="200.0">
+                     <children>
+                        <StackPane maxHeight="-Infinity" prefHeight="70.0" prefWidth="263.0" style="-fx-background-color: #363740;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" graphicTextGap="5.0" prefHeight="28.0" prefWidth="135.0" snapToPixel="false" style="-fx-background-color: #363740;" text="Cuisine" textFill="WHITE" StackPane.alignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/Home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="25.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane alignment="BOTTOM_CENTER" maxHeight="-Infinity" prefHeight="45.0" prefWidth="268.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="51.0" prefHeight="60.0" prefWidth="268.0" style="-fx-background-color: grey;">
+                                 <children>
+                                    <TextField fx:id="searchTxt" layoutX="8.0" layoutY="11.0" prefHeight="30.0" prefWidth="172.0" promptText="Recherche..." style="-fx-background-color: white;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="confirmSearch" layoutX="226.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="35.0" style="-fx-background-color: white;" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@ressources/icons/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="resetSearch" layoutX="185.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="35.0" style="-fx-background-color: white;" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@ressources/icons/cross.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                        <Accordion fx:id="equipmentContent" prefHeight="568.0" prefWidth="268.0" style="-fx-background-color: #363740;" VBox.vgrow="ALWAYS">
+                           <panes>
+                              <TitledPane fx:id="ovenTitle" animated="false" text="Four">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/oven.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <VBox fx:id="ovenContent" style="-fx-background-color: grey;" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="fridgeTitle" animated="false" text="Réfrigérateur">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/fridge.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <VBox fx:id="fridgeContent" style="-fx-background-color: grey;" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="doorTitle" animated="false" text="Porte">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/door.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <VBox fx:id="doorContent" style="-fx-background-color: grey;" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="stoveTitle" animated="false" text="Meuble">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/stove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <VBox fx:id="stoveContent" style="-fx-background-color: grey;" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="chairTitle" animated="false" prefHeight="179.0" prefWidth="268.0" text="Chaise">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/chair.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <content>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="331.0" prefWidth="273.0">
+                                       <content>
+                                          <VBox fx:id="chairContent" style="-fx-background-color: grey;" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <TabPane tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Cuisine">
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Canvas fx:id="kitchenCanvas" height="548.0" width="767.0" />
+                              <Label fx:id="widthKitchen" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="235.0" StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets top="25.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label fx:id="heightKitchen" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="235.0" rotate="270.0" StackPane.alignment="CENTER_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="-60.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </content>
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane maxHeight="600.0" maxWidth="800.0" StackPane.alignment="CENTER">
+                                 <children>
+                                    <Canvas fx:id="kitchenCanvas" height="541.0" layoutX="28.0" layoutY="30.0" width="765.0" />
+                                    <Label fx:id="widthKitchen" alignment="CENTER" contentDisplay="TOP" layoutX="319.0" layoutY="3.0" prefHeight="23.0" prefWidth="183.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="heightKitchen" alignment="CENTER" contentDisplay="TOP" layoutX="-77.0" layoutY="289.0" prefHeight="23.0" prefWidth="183.0" rotate="270.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </AnchorPane>
+                              <Pane fx:id="panier" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="56.0" prefWidth="178.0" style="-fx-background-color: gray;" StackPane.alignment="TOP_RIGHT">
+                                 <children>
+                                    <Text layoutX="138.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panier">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="price" alignment="CENTER" layoutX="7.0" layoutY="14.0" prefHeight="26.0" prefWidth="123.0">
+                                       <effect>
+                                          <DropShadow offsetY="4.0" />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="116.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="buttonBuy" layoutX="137.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="35.0" style="-fx-background-color: light gray;" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@ressources/icons/Buy.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="detailPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450.0" prefWidth="187.0" style="-fx-background-color: #363740;" StackPane.alignment="CENTER_RIGHT">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/rotate.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ressources/icons/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="EquipImgDetail" fitHeight="129.0" fitWidth="188.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="NameDetail" layoutX="14.0" layoutY="185.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="refDetail" layoutX="14.0" layoutY="267.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE" />
+                                    <Label fx:id="dimDetail" layoutX="14.0" layoutY="293.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE" />
+                                    <Label fx:id="prixDetail" layoutX="14.0" layoutY="243.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </items>
+    </SplitPane>
+      <SplitPane orientation="VERTICAL" prefHeight="51.0" prefWidth="1200.0">
+         <items>
+            <StackPane prefWidth="1198.0">
+               <children>
+                  <Label fx:id="notify" prefHeight="78.0" prefWidth="1218.0" wrapText="true" StackPane.alignment="CENTER_LEFT" />
+               </children>
+            </StackPane>
+         </items>
+      </SplitPane>
+  </children>
+</VBox>
